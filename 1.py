@@ -1,5 +1,8 @@
 #!/usr/bin/python3
 
+# run it as
+# ./1.py < inputs/1
+
 maximum = 0
 current = 0
 
