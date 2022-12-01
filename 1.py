@@ -1,21 +1,17 @@
 #!/usr/bin/python3
 
-import sys
-
 maximum = 0
 current = 0
 
-for line in sys.stdin:
+while True:
     try:
+        line = input()
         number = int(line.strip())
         current += number
-    except ValueError:
+    except (ValueError, EOFError) as e:
         if maximum < current:
             maximum = current
+        if isinstance(e, EOFError):
+            print(maximum)
+            exit(0)
         current = 0
-# finally, do the last one, we didn't detect it because it lacks ''
-if maximum < current:
-    maximum = current
-
-
-print(maximum)
