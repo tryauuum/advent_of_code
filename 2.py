@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 # run it as
-# ./2.py < inputs/2
+# ./2.py [ --one | --two ] < inputs/2
 
 import sys
 
